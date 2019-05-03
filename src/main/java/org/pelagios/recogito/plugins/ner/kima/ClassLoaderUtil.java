@@ -1,4 +1,4 @@
-package org.pelagios.recogito.sdk.examples.ner;
+package org.pelagios.recogito.plugins.ner.kima;
 
 /*
  * Copyright 2002-2003,2009 The Apache Software Foundation.

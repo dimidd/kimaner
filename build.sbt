@@ -1,8 +1,8 @@
-name := "recogito-plugin-sdk"
+name := "recogito-plugin-ner-kima"
 
 organization := "org.pelagios"
 
-version := "0.3"
+version := "0.1"
 
 scalaVersion := "2.11.11"
 
@@ -13,7 +13,9 @@ crossPaths := false
 autoScalaLibrary := false
 
 /** Runtime dependencies **/
-libraryDependencies ++= Seq()
+libraryDependencies ++= Seq(
+  "org.pelagios" % "recogito-plugin-sdk" % "1.0" from "https://github.com/pelagios/recogito2-plugin-sdk/releases/download/v1.0/recogito-plugin-sdk-1.0.jar"
+)
 
 /** Test dependencies **/
 libraryDependencies ++= Seq(

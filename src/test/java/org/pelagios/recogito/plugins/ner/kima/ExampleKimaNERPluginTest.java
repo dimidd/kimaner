@@ -1,5 +1,4 @@
-package org.pelagios.recogito.sdk.examples.ner;
-
+package org.pelagios.recogito.plugins.ner.kima;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,8 +8,7 @@ import org.junit.Test;
 import org.pelagios.recogito.sdk.ner.Entity;
 import org.pelagios.recogito.sdk.ner.EntityType;
 
-
-public class KimaNERPluginBasicTest {
+public class ExampleKimaNERPluginTest {
 
 	private final String SAMPLE_TEXT =
 			"המהרל מירושלים נולד בפראג והגיע לליטא, פולין ולוורשה שבאירופה שוטין ובתחלה אם אב תוגרמה רוסיא רוסלאנד, זיטאמיר, אדעסא, ענינים שונים";
@@ -32,7 +30,7 @@ public class KimaNERPluginBasicTest {
 	@Test
 	public void test() {
 		final ExampleKimaNERPlugin plugin = new ExampleKimaNERPlugin();
-		final List<Entity> entities = plugin.parse(this.SAMPLE_TEXT);
+		final List<Entity> entities = plugin.parse(this.SAMPLE_TEXT, null);
 
 		assertEquals(this.expectedMatches.length, entities.size());
 		for (int i = 0; i < this.expectedMatches.length; ++i) {

@@ -1,4 +1,4 @@
-package org.pelagios.recogito.sdk.examples.ner;
+package org.pelagios.recogito.plugins.ner.kima;
 
 import java.util.Arrays;
 import java.util.Map;

@@ -1,1 +1,1 @@
-org.pelagios.recogito.sdk.examples.ner.ExampleKimaNERPlugin
+org.pelagios.recogito.plugins.ner.kima.ExampleKimaNERPlugin

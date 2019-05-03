@@ -1,4 +1,4 @@
-package org.pelagios.recogito.sdk.examples.ner;
+package org.pelagios.recogito.plugins.ner.kima;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.StreamHandler;
 
+import org.pelagios.recogito.sdk.PluginEnvironment;
 import org.pelagios.recogito.sdk.ner.Entity;
 import org.pelagios.recogito.sdk.ner.EntityType;
 import org.pelagios.recogito.sdk.ner.NERPlugin;
@@ -83,7 +84,7 @@ public class ExampleKimaNERPlugin implements NERPlugin, HebMatcher {
      * 'LOCATION' entity for every uppercase word. Don't consider this a sensible
      */
     @Override
-    public List<Entity> parse(String text) {
+    public List<Entity> parse(String text, PluginEnvironment env) {
         final String[] words = text.split("\\s+");
         final List<Entity> phrases = new ArrayList<Entity>();
 
@@ -132,12 +133,15 @@ public class ExampleKimaNERPlugin implements NERPlugin, HebMatcher {
             runningOffset += nextWord.length();
         }
 
+        /*
         final int maxMatchesToLog = Math.min(phrases.size(), N_MATCHES_TO_LOG);
         LOGGER.log(
             Level.INFO,
-            "\n\nKimaNER: processsing text:\n{0}\nFound {1} mathces. The first {2}:",
+            "\n\nKimaNER: processsing text:\n{0}\nFound {1} matches. The first {2}:",
             new Object[] {text, phrases.size(), maxMatchesToLog}
         );
+        */
+        /*
         for (int i = 0; i < maxMatchesToLog; ++i) {
             LOGGER.log(
                 Level.INFO,
@@ -145,6 +149,7 @@ public class ExampleKimaNERPlugin implements NERPlugin, HebMatcher {
                 new Object[] {i + 1, phrases.get(i).toString()}
             );
         }
+        */
         return phrases;
     }
 }
