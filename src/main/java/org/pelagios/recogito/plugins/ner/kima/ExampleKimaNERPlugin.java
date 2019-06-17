@@ -26,7 +26,7 @@ public class ExampleKimaNERPlugin implements NERPlugin, HebMatcher {
     public static final int MAX_WORDS = 7;
     private HashMap<String, String> _aliases;
     private final char[] _prefs = { 'ב', 'ל', 'מ', 'ש', 'ו' };
-    private static final String NAMES_FILE = "nba_1500_1940.tsv";
+    private static final String NAMES_FILE = "variants-minus-blacklist0613.tsv"; // "nba_1500_1940.tsv";
     private static final int N_MATCHES_TO_LOG = 12;
 
     public ExampleKimaNERPlugin() {
